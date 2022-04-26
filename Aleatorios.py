@@ -5,7 +5,7 @@ def genRandStr(x):
     rand = nacl.utils.random(x)
     
     for e in rand:
-        randStr += (hex(e)[2:]).upper() + ' '
+        randStr += (hex(e)[2:]).upper()
 
     return randStr
 
