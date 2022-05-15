@@ -12,7 +12,7 @@ class AESCipher(object):
     def encrypt(self, raw):
         raw = self._pad(raw)
         iv = Random.new().read(AES.block_size)
-        cipher = AES.new(self.key, AES.MODE_CBC, iv)
+        cipher = AES.new(self.key, AES.MODE_CFB, iv)
         return base64.b64encode(iv + cipher.encrypt(raw.encode()))
 
     def decrypt(self, enc):
