@@ -1,4 +1,4 @@
-from Proyecto.AES256 import AESCipher
+from AES256 import AESCipher
 from nacl.signing import SigningKey
 import socket,nacl.secret,nacl.utils
 
